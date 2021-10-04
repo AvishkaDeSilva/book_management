@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static',filename='user.png')}}">
+</head>
+<title>{% block title %}{% endblock %}</title>
+</head>
+
+<body style="font-family: 'PT Sans', sans-serif;background-image:  url(../static/books.jpg); background-position: center;background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
+      <div style=" padding: 0px; border-radius: 3px;background-color: #666262;font-weight: bold;display: inline-block;text-align:center; margin: 10px;">
+        {% block nav %}{% endblock %}
+      </div>  
+   
+            
+    <div  style=" margin:20px ; height:100%;">
+        <div class="container ;" style="color: rgb(255, 255, 255); align-items: stretch; "> 
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
+    <script src="{{ url_for('static',filename='script.js')}}"></script>
+</body>
+
+</html>
